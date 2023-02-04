@@ -1,0 +1,148 @@
+:root {
+  --darkest-black: #171D20;
+  --darker-black: #1E2529;
+  --dark-black: #2F3133;
+  --light-gray: #EAEAEA;
+  --light-red: #FF7377;
+  --light-blue: #99BADD;
+}
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  font-family: "arial", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--darkest-black);
+  color: var(--light-gray)
+}
+header{
+  background-color: var(--darker-black);
+  width: 90%;
+  text-align: center;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 10px;
+}
+#input-section{
+  margin-top: 10px;
+  min-height: 150px;
+  background-color: var(--darker-black);
+  width: 90%;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 5px;
+}
+form{
+  width: 100%;
+}
+p{
+  font-size: 1rem;
+  color: var(--light-gray)
+}
+#new-task-input{
+  margin-top: 5px;
+  width: 80%;
+  height: 30px;
+  border: 2px solid var(--light-gray);
+  border-radius: 1rem;
+  background-color: var(--darker-black);
+  outline: none;
+  padding: 1rem;
+  font-size: 1rem;
+  color: var(--light-gray);
+  margin-right: 5px;
+}
+#new-task-input::placeholder{
+  color: var(--light-gray);
+}
+#add-task-btn{
+  background-color: var(--darker-black);
+  border: 2px solid var(--light-gray);
+  border-radius: 1rem;
+  color: var(--light-gray);
+  padding: 5px;
+  cursor: pointer;
+}
+#add-task-btn:hover{
+  transform: scale(1.1);
+}
+#task-list {
+  background-color: var(--darker-black);
+  margin-top: 10px;
+  width: 90%;
+  min-height: 550px;
+  border-radius: 5px;
+  padding: 10px;
+  position: relative;
+}
+.task{
+  margin-top: 10px;
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  background-color: var(--darkest-black);
+  padding: 10px;
+  border-radius: 1rem;
+}
+.content{
+  flex: 1;
+}
+.text{
+  outline: none;
+  width: 100%;
+  background-color: var(--darkest-black);
+  border-radius: 1rem;
+  padding: 5px;
+  border: none;
+  color: var(--light-gray);
+  font-size: 1rem;
+}
+.text:not(:read-only){
+  color: red
+}
+.action-btns{
+  min-width: 10px;
+}
+.edit-btn, .delete-btn{
+  padding: 5px;
+  color: var(--light-gray);
+  cursor: pointer;
+  outline: none;
+}
+.delete-btn{
+  border-radius: 1rem;
+  border: 2px solid;
+  background-color: var(--light-red);
+  border-color: red;
+  color: red;
+  font-size: 1rem;
+}
+.delete-btn:hover{
+  scale: 1.1;
+}
+.edit-btn{
+ font-size: 1rem;
+ border: none;
+ background-color: var(--darkest-black);
+}
+.placeholder-text{
+  color: var(--dark-black);
+  font-size: 30px;
+  font-weight: 500;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.error-message{
+  color: var(--light-red);
+  margin-top: 5px;
+  font-size: .8rem;
+}
